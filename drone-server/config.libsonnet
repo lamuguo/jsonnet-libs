@@ -1,0 +1,21 @@
+{
+  _config+:: {
+    port: 80,
+    name: 'drone-server',
+    namespace: 'default',
+    image: 'drone/drone:1',
+    storage: '500Mi',
+    cpuRequest: '0.05',
+    cpuLimit: '1',
+    memoryRequest: '500Mi',
+    memoryLimit: '1Gi',
+    DRONE_GITHUB_SERVER: 'https://github.com',
+    DRONE_SERVER_PROTO: 'https',
+    DRONE_USER_FILTER: 'iHealthLab',
+    DRONE_LOGS_COLOR: 'true',
+    DRONE_LOGS_PRETTY: 'true',
+    DRONE_LOGS_DEBUG: 'true',
+    DRONE_AGENTS_ENABLED: 'true',
+    DRONE_SERVER_PORT: ':80',
+  },
+}
